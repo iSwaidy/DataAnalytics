@@ -1,0 +1,129 @@
+Exercise 3A - Reviewing Survey Results
+
+=== QUESTION 1: What do you envision yourself doing 5 minutes before class starts each day, to ensure that you are ready to start on time? ===
+
+1.  What conclusion can you reach about the responses to this question?
+	
+	Most students plan to log in early, review notes, and have their materials ready.
+
+2. Is the default summary or visualization helpful? How could it be improved?
+
+	The default view just shows raw text with no grouping. Categorizing responses by theme (tech prep, mental prep, review) will improve it alot.
+
+3. For questions with an “Other” option, where can you find the actual text of those responses? Do you notice anything that might be tricky about analyzing these?
+	
+	Responses are worded differently, making almost impossible to count or compare answers without tagging by theme first.
+
+4. For questions calling for a written response, what challenges do you notice about finding trends or patterns in the answers provided?
+
+	Freeform responses require manual reading to find patterns since there is no way to auto group different phrasings.
+
+5. Now that you can see the responses, how might you recommend rephrasing this or question or the response options in a future survey?
+
+	Converting it to multiple choice would make responses easier to analyze.
+
+=== QUESTION 2: Do you have a second monitor connected to your computer? ===
+
+1. What conclusion can you reach about the responses to this question?
+
+	About half the class has some form of second display while the other half does not. Many students may struggle with screen space.
+
+2. Is the default summary helpful? How could it be improved?
+
+	Responses are freeform, there is no clean yes or no. A simple Yes, No, Somewhat multiple choice would have made this much easier to visualize.
+
+3. For questions with an “Other” option, where can you find the actual text of those responses? Do you notice anything that might be tricky about analyzing these?
+
+	Students answered with "iPad", "second laptop", "3 monitors on my PC" etc., which are technically not second monitors, making accurate counting difficult.
+
+4. For questions calling for a written response, what challenges do you notice about finding trends or patterns in the answers provided?
+
+	Students interpreted "second monitor" differently. The data is inconsistent and would need cleaning before any analysis could be done.
+
+5. Now that you can see the responses, how might you recommend rephrasing this or question or the response options in a future survey?
+
+	Ask "What secondary display do you have available?" with options like External monitor, Second laptop, iPad/tablet, None.
+
+=== QUESTION 3: Do you have an external keyboard and mouse? ===
+
+1. What conclusion can you reach about the responses to this question?
+
+	Half the class has an external keyboard or mouse. Many have one but not both. This suggests that this is not a universal setup with students.
+
+2. Is the default summary helpful? How could it be improved?
+
+	A bar chart showing Yes/No counts would work here since most responses are consistent. However, some answers may cause errors.
+
+3. For questions with an “Other” option, where can you find the actual text of those responses? Do you notice anything that might be tricky about analyzing these?
+
+	Some students specified having only a mouse or only a keyboard, which does not fit a simple Yes/No format.
+
+4. For questions calling for a written response, what challenges do you notice about finding trends or patterns in the answers provided?
+
+	Partial answers like "Just a mouse" do not translate to Yes or No. This makes it hard to summarize accurately without manual cleanup.
+
+5. Now that you can see the responses, how might you recommend rephrasing this or question or the response options in a future survey?
+
+	Separate it into two questions. One for keyboard and one for mouse. Each with a simple Yes or No option.
+
+=== QUESTION 4: How do you plan to take notes for this class – in a doc on your computer, with pen and paper, or something else?  ===
+
+1.  What conclusion can you reach about the responses to this question?
+
+	Majority of students plan to take notes with pen and paper, with a small portion using their computer, and few using both or an iPad.
+
+2. Is the default summary helpful? How could it be improved?
+
+	This question had the most consistent responses and a pie or bar chart would be clean and useful.
+
+3. For questions with an “Other” option, where can you find the actual text of those responses? Do you notice anything that might be tricky about analyzing these?
+
+	A few students said "both" or "iPad," which falls outside the main expected categories.
+
+4. For questions calling for a written response, what challenges do you notice about finding trends or patterns in the answers provided?
+
+	This question had the most consistent and easy to analyze responses of all five questions.
+
+5. Now that you can see the responses, how might you recommend rephrasing this or question or the response options in a future survey?
+
+	Add "Both" and "iPad/tablet" as options to capture answers.
+
+=== QUESTION 5: What is one question that you have right now, about this course generally or about a specific topic we’ll be talking about? ===
+
+1.  What conclusion can you reach about the responses to this question?
+
+	Students are curious about tutoring support, how hard the course will be, and how much SQL and Python they will learn, showing both excitement and anxiety about the 	technical content.
+
+2. Is the default summary helpful? How could it be improved?
+
+	No, open text responses have no default visualization.
+
+3. For questions with an “Other” option, where can you find the actual text of those responses? Do you notice anything that might be tricky about analyzing these?
+
+	Several students left this blank or said "no questions yet," which affect analysis.
+
+4. For questions calling for a written response, what challenges do you notice about finding trends or patterns in the answers provided?
+
+	Each response is unique so spotting patterns requires manual tagging by theme before any summary is possible.
+
+5. Now that you can see the responses, how might you recommend rephrasing this or question or the response options in a future survey?
+
+	Keep it open-ended but add a follow-up multiple choice. "What area are you most curious about?" with options like SQL/Python, capstone projects, tutoring, career 	outcomes.
+
+=== ADDITIONAL QUESTIONS ===
+
+6. Is there anything that surprised you about the survey responses?
+
+	Nearly all students plan to take notes with pen and paper despite this being tech course.
+
+7.  Looking at the responses to questions 1 and 5, are there any ideas you might try to include in your morning routine, or any questions that you are also curious about?
+
+	Reviewing notes before class was mentioned by several students and seems like a strong habit worth adopting, and I was also curious about the capstones multiple 	students asked about.
+
+8. Pretend you are the instructor. Is there anything you can learn from this survey to help in how you approach teaching this class?
+
+	The instructor can see that many students lack a second monitor.
+
+9. Again, pretend you are the instructor. Do you think it was helpful or not helpful tomake this survey anonymous? Why or why not?
+	
+	Anonymous responses encourage honest answers about setup, but without names the instructor cannot follow up with specific students who may need support.
