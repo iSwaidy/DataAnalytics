@@ -109,3 +109,51 @@ SELECT
     UnitPrice AS 'Original Price',
     UnitPrice * 0.9 AS '10% Discount Price'
 FROM Products;
+
+
+-- EXAMPLE 1
+SELECT o.orderID, c.CompanyName AS 'Customer',
+O.OrderDate
+FROM Orders o
+JOIN Customers c ON o.CustomerID = c.CustomerID
+ORDER BY o.OrderDate DESC
+LIMIT 5;
+
+-- EXAMPLE 2
+SELECT OrderID, CompanyName, OrderDate
+FROM Orders
+JOIN Customers USING(CustomerID)
+ORDER BY OrderDATE
+Limit 5;
+
+-- EXAMPLE 3
+
+SELECT  p.ProductName,
+		c.CategoryName,
+		p.UnitPrice
+FROM Products p
+INNER JOIN Categories c ON p.CategoryID = c.CategoryID
+ORDER BY c.CategoryName, p.ProductName
+LIMIT 6;
+
+-- EXAMPLE 5
+SELECT c.CompanynName,
+		COUNT(o.orderid) AS 'Order Count'
+FROM customer c
+LEFT JOIN Orders o ON c.CustomerID = o.CustomerID
+GROUP BY c.CompanyName
+ORDER BY 'Order Count' ASC
+LIMIT 5;
+
+-- Cris Ramirez
+-- April 23,2026
+
+-- EXAMPLE 1 - TOTAL NUMBER OF NUMBERS
+
+SELECT COUNT(*) AS 'Total Orders'
+FROM orders;
+
+-- EXAMPLE 2 - Total Freight Charged
+
+SELECT SUM(Freight), AVG(Freight), MIN(Freight), MAX(Freight)
+FROM orders;
