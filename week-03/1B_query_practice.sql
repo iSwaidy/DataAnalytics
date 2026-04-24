@@ -22,18 +22,17 @@ USE northwind;
 	FROM products
 	WHERE UnitsInStock = 0 AND UnitsOnOrder >= 1;
 
--- 4. Examine the products table. How does it identify the type (category) of each item sold? Where can you find a list of all categories? 
---    Write a set of queries to answer these questions, ending with a query that creates a list of all the seafood items we carry
+-- 4. Examine the products table. How does it identify the type (category) of each item sold?
 
 -- The products table uses CategoryID (a foreign key) to identify type.
 	
     SELECT * FROM products;
 
--- The categories table holds the list of all categories.
+-- Where can you find a list of all categories? 
 	
     SELECT * FROM categories;
 
--- Seafood is CategoryID = 8. Final query: all seafood items.
+-- Write a set of queries to answer these questions, ending with a query that creates a list of all the seafood items we carry
 	
     SELECT ProductID, ProductName, CategoryID
 	FROM products
@@ -55,14 +54,12 @@ USE northwind;
 	FROM products
 	WHERE SupplierID = 4;
 
--- 6. How many employees work at northwind? What employees have "manager" somewhere in their job title?
+-- 6. How many employees work at northwind?
 
--- Total employee count
-	
     SELECT COUNT(*) AS EmployeeCount
 	FROM employees;
 
--- Employees with "manager" in title
+-- What employees have "manager" somewhere in their job title?
 	
 	SELECT EmployeeID, FirstName, LastName, Title
 	FROM employees
