@@ -1,0 +1,16 @@
+# Cris Ramirez
+# 4/28/2026
+# user input in python
+
+# Ask the user to enter two numbers
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+print(f'You have entered {num1} and {num2}')
+
+print(type(num1))
+print(type(num2))
+
+print(f'The sum of {num1} and {num2} is {num1+num2}')
+print(f' The product of {num1} and {num2} is {num1*num2}')
+print(f' The product of 2 and {num2} is {2*num2}')

@@ -1,0 +1,9 @@
+name = input("Enter your name: ")
+
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+number3 = float(input("Enter third number: "))
+
+average = (number1 + number2 + number3) / 3
+
+print(f"Hello {name}! The average of {number1}, {number2} and {number3} is: {average}")
