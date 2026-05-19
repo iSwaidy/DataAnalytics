@@ -1,0 +1,24 @@
+
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(matrix)
+print(matrix[1][2])    # Row 1, Column 2
+
+cube = [
+    [
+        [1, 2],
+        [3, 4]
+    ],
+    [
+        [5, 6],
+        [7, 8]
+    ]
+]
+
+print(cube)
+print(cube[1][0][1])    # Layer 1, Row 0, Column 1
