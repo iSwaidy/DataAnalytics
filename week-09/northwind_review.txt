@@ -1,0 +1,106 @@
+northwind database review
+notes from exploring the northwind database in mysql workbench to plan a power bi data model.
+general observations
+
+highly normalized database, data is split across many tables to minimize duplication
+two empty tables (customercustomerdemo, customerdemographics) were dropped since they have no records
+row counts suggest order details (2155) and orders (830) are the fact tables; everything else is a lookup
+
+categories
+
+represents product categories like beverages, dairy, seafood
+primary key: categoryid
+categoryname is the useful field, rename to "category"
+description is long text, drop it
+picture is binary image data, drop it
+only 8 records
+
+customers
+
+represents companies that place orders
+primary key: customerid (nchar(5), string code like "alfki")
+companyname is the main descriptor, rename to "customer"
+keep contactname, contacttitle, city, region, postalcode, country
+drop address, phone, fax
+93 customer records
+
+employees
+
+represents sales staff at northwind
+primary key: employeeid
+keep firstname, lastname, title, titleofcourtesy, birthdate, hiredate, city, region, postalcode, country
+reportsto is a self-referencing foreign key, useful for org hierarchy
+drop address, homephone, extension, photo, notes, photopath
+birthdate and hiredate can power calculations like employee age or tenure
+only 9 employees, small enough to use in slicers
+
+employeeterritories
+
+junction table linking employees to territories (many-to-many)
+composite primary key: employeeid + territoryid
+both columns are foreign keys
+keep both columns
+
+order details
+
+represents individual line items on an order, one row per product per order
+composite primary key: orderid + productid (both foreign keys too)
+unitprice, quantity, discount are the measures
+rename to "sales" in the model since each row is a sale event
+2155 records, the largest table, this is the fact table
+
+orders
+
+represents customer orders
+primary key: orderid
+foreign keys: customerid, employeeid, shipvia (renamed to shipperid)
+keep orderdate, requireddate, shippeddate, freight, shipname, shipcity, shipregion, shippostalcode, shipcountry
+drop shipaddress
+830 orders
+
+products
+
+represents products northwind sells
+primary key: productid
+foreign keys: supplierid, categoryid
+keep productname (rename to "product"), unitprice, unitsinstock, unitsonorder, reorderlevel, discontinued
+77 products
+
+region
+
+represents broad sales regions (eastern, western, northern, southern)
+primary key: regionid
+regiondescription is the useful field, rename to "region"
+only 4 records
+
+shippers
+
+represents shipping companies
+primary key: shipperid
+companyname is useful, rename to "shipper"
+drop phone
+only 3 shippers
+
+suppliers
+
+represents companies that provide products to northwind
+primary key: supplierid
+keep companyname (rename to "supplier"), contactname, contacttitle, city, region, postalcode, country
+drop address, phone, fax, homepage
+29 suppliers
+
+territories
+
+represents sales territories under each region
+primary key: territoryid
+foreign key: regionid
+territorydescription is the useful field, rename to "territory"
+53 records
+
+modeling notes
+
+order details (sales) sits at the center as the fact table
+orders is a secondary fact table linked to customers, employees, shippers
+products links to categories and suppliers
+employees link to territories through the junction table, which links to region
+this gives a snowflake layout with measures (sales amount, quantity, discount) flowing through orders and order details
